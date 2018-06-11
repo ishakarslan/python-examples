@@ -50,8 +50,7 @@ def parse_json(parse):
           print tarih, imageno
 
 def main():
-    #parse_json(open_and_read("aws ec2 describe-images"))
-    parse_json(open_and_read("cat /root/ishak.txt"))
+    parse_json(open_and_read("aws ec2 describe-images"))
 
 if __name__ == "__main__":
     main()
