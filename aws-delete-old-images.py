@@ -29,8 +29,8 @@ def open_and_read(komut):
     return result
 
 def delete_func(imaj):
-    #os.system("ec2 delete {0}}".format(imaj))
-    print("{0} imaj silme komutu calistirildi".format(imaj))
+    os.system("ec2 delete {0}}".format(imaj))
+    #print("{0} imaj silme komutu calistirildi".format(imaj)) #for test
 
 def parse_json(parse):
    utc = UTC()
@@ -51,6 +51,7 @@ def parse_json(parse):
 
 def main():
     parse_json(open_and_read("aws ec2 describe-images"))
+    #parse_json(open_and_read("cat /tmp/data.json")) #for test
 
 if __name__ == "__main__":
     main()
